@@ -127,48 +127,54 @@ h1 {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  /* Adjust layout for smaller screens */
+  /* Container layout for mobile */
   .container {
-    flex-direction: column; /* Stack content vertically on smaller screens */
-    height: auto; /* Adjust height to fit content */
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 0 1rem; /* Prevent content touching screen edge */
+    box-sizing: border-box;
   }
 
-  /* Adjust content section for small screens */
+  /* Content section */
   .content {
-    text-align: center; /* Center-align text on smaller screens */
-    margin-bottom: 2rem; /* Add space between content and PDF */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
-  /* Adjust PDF preview for small screens */
+  /* PDF preview */
   .pdf-preview {
     max-width: 100%;
-    height: auto; /* Allow PDF to scale better */
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
+  /* Optional: hide PDF on very small screens */
+  @media (max-width: 480px) {
+    .pdf-preview {
+      display: none;
+    }
+  }
+
+  /* Email button */
   .email-button {
-    margin-left: 0; /* Center the button */
-    margin-top: 2rem; /* Adjust top margin */
+    margin-left: 0;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
   }
 
-  /* Secret button position */
+  /* Secret button positioning and size */
   .secret-button {
-    top: 5px;
-    left: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjust for very small screens */
-  .container {
-    padding: 1rem;
-  }
-
-  .content {
-    font-size: 1rem; /* Reduce font size */
-  }
-
-  .email-button {
-    padding: 0.6rem 1.5rem; /* Smaller padding */
-    font-size: 0.9rem; /* Smaller font size */
+    top: 10px;
+    left: 10px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
 }
