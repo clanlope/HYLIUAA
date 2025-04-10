@@ -161,3 +161,9 @@ h1 {
         order: 1; /* Place content above the PDF preview */
     }
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}
