@@ -131,7 +131,7 @@ h1 {
   .container {
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 20%;
     padding: 0 1rem; /* Prevent content touching screen edge */
     box-sizing: border-box;
   }
@@ -146,7 +146,7 @@ h1 {
 
   /* PDF preview */
   .pdf-preview {
-  width: 100%;
+  width: 70%;
   height: 500px; /* You can adjust based on needs */
   display: block;
   margin: 0 auto;
