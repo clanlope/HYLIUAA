@@ -157,6 +157,7 @@ h1 {
 
     /* Ensure the content is on top */
     .content {
+        display:none;
         order: 1; /* Place content above the PDF preview */
     }
 }
