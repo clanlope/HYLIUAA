@@ -125,43 +125,6 @@ h1 {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  /* Container layout for mobile */
-  .container {
-    flex-direction: column;
-    height: auto;
-    width: 20%;
-    padding: 0 1rem; /* Prevent content touching screen edge */
-    box-sizing: border-box;
-  }
-
-  /* Content section */
-  .content {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  /* PDF preview */
-  .pdf-preview {
-  width: 70%;
-  height: 500px; /* You can adjust based on needs */
-  display: block;
-  margin: 0 auto;
-}
-
-  /* Optional: hide PDF on very small screens */
-  @media (max-width: 480px) {
-  .pdf-preview {
-  width: 70%;
-  height: 500px; /* You can adjust based on needs */
-  display: block;
-  margin: 0 auto;
-}
-  }
-
   /* Email button */
   .email-button {
     margin-left: 0;
