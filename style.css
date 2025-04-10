@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Calibri', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #000000); /* White to Black Gradient Background */
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Main Container */
+.container {
+  display: flex; /* Horizontal layout */
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100vh; /* Full height */
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* Left side content */
+.content {
+  text-align: left;  /* Ensures the text is aligned to the left */
+  display: flex;
+  flex-direction: column;  /* Keeps the content in a vertical layout */
+  justify-content: center;  /* Vertically centers the content within the .content div */
+  align-items: flex-start;  /* Aligns the text to the left */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Intro Paragraph Styles */
+.intro {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  line-height: 1.1;
+  margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+/* Email Button Styles */
+.email-button {
+  padding: 0.8rem 2rem;
+  background-color: #ffffff;
+  color: #2575fc;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 10rem;
+  margin-left: 15rem;
+}
+
+.email-button:hover {
+  background-color: #2575fc;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Right side PDF Preview */
+.pdf-preview {
+  flex: 1; /* Takes up 50% of the container */
+  padding: 1rem;
+  height: 100%;
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+/* PDF Embed Styles */
+.pdf-embed {
+  width: 80%; /* Ensure it takes full width of the container */
+  height: 88%; /* Ensure it takes full height of the container */
+  object-fit: cover; /* The PDF will fill the container, maintaining aspect ratio */
+  pointer-events: none; /* Disable interaction with the embedded PDF */
+}
+
+.secret-button {
+  position: fixed; /* Fixes the button in the corner */
+  top: 10px;
+  left: 10px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: grey;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0.8;
+}
+
+.secret-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
