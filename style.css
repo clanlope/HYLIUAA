@@ -146,11 +146,11 @@ h1 {
 
   /* PDF preview */
   .pdf-preview {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+  width: 100%;
+  height: 500px; /* You can adjust based on needs */
+  display: block;
+  margin: 0 auto;
+}
 
   /* Optional: hide PDF on very small screens */
   @media (max-width: 480px) {
