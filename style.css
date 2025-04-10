@@ -144,3 +144,19 @@ h1 {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 480px) {
+    /* Adjust PDF preview for phones */
+    .pdf-preview {
+        display: block; /* Ensure it's visible */
+        width: 100%; /* Full width */
+        height: auto; /* Let it adjust based on content */
+        margin: 1rem auto 0 auto; /* Center it with some margin */
+        order: 1; /* Place it below the content */
+    }
+
+    /* Ensure the content is on top */
+    .content {
+        order: 0; /* Place content above the PDF preview */
+    }
+}
