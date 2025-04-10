@@ -152,11 +152,11 @@ h1 {
         width: 100%; /* Full width */
         height: auto; /* Let it adjust based on content */
         margin: 1rem auto 0 auto; /* Center it with some margin */
-        order: 1; /* Place it below the content */
+        order: 0; /* Place it below the content */
     }
 
     /* Ensure the content is on top */
     .content {
-        order: 0; /* Place content above the PDF preview */
+        order: 1; /* Place content above the PDF preview */
     }
 }
