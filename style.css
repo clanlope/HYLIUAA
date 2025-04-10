@@ -99,8 +99,8 @@ h1 {
 
 /* PDF Embed Styles */
 .pdf-embed {
-  width: 100%; /* Make the PDF embed take full width */
-  height: 100%; /* Ensure the PDF takes the full height of its container */
+  width: 80%; /* Make the PDF embed take full width */
+  height: 88%; /* Ensure the PDF takes the full height of its container */
   object-fit: contain; /* Maintain aspect ratio */
   pointer-events: none; /* Disable interaction with the embedded PDF */
 }
