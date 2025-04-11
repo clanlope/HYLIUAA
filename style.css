@@ -1,68 +1,75 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
   font-family: 'Calibri', sans-serif;
-  background: linear-gradient(135deg, #ffffff, #000000); /* White to Black Gradient Background */
+  background: linear-gradient(135deg, #ffffff, #000000);
   color: #fff;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0;
-  margin: 0;
 }
 
-/* Main Container */
 .container {
-  display: flex; /* Horizontal layout */
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Adjust to full width */
-  height: 100vh; /* Full height */
+  width: 50%;
+  height: 100vh;
   max-width: 1200px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* Left side content */
-.content {
-  text-align: left;  /* Ensures the text is aligned to the left */
+.container2 {
   display: flex;
-  flex-direction: column;  /* Keeps the content in a vertical layout */
-  justify-content: center;  /* Vertically centers the content within the .content div */
-  align-items: flex-start;  /* Aligns the text to the left */
-  width: 100%; /* Ensures the content takes full width on smaller screens */
-  max-width: 600px; /* Limit the width on larger screens */
-  padding-right: 2rem; /* Adds some space to the right side */
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  max-width: 1200px;
+  background: transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
-/* Heading Styles */
+
+.content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  padding-right: 2rem;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-/* Intro Paragraph Styles */
 .intro {
   font-size: 1.2rem;
   color: #f0f0f0;
   line-height: 1.1;
-  margin-bottom: 1rem; /* Space between paragraphs */
+  margin-bottom: 1rem;
 }
 
-/* Email Button Styles */
 .email-button {
   padding: 0.8rem 2rem;
   background-color: #ffffff;
@@ -75,7 +82,6 @@ h1 {
   border: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   margin-top: 10rem;
-  margin-left: 0; /* Adjust margin */
 }
 
 .email-button:hover {
@@ -84,30 +90,24 @@ h1 {
   transform: translateY(-5px);
 }
 
-/* Right side PDF Preview */
 .pdf-preview {
-  flex: 1; /* Takes up remaining space */
+  flex: 1;
   padding: 1rem;
   height: 100%;
   filter: blur(3px);
   transition: filter 0.3s ease;
-  max-width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/* PDF Embed Styles */
 .pdf-embed {
-  width: 80%; /* Make the PDF embed take full width */
-  height: 88%; /* Ensure the PDF takes the full height of its container */
-  object-fit: contain; /* Maintain aspect ratio */
-  pointer-events: none; /* Disable interaction with the embedded PDF */
+  width: 69%;
+  height: 100%;
+  max-height: 100%;
+  pointer-events: none;
 }
 
-/* Secret Button */
 .secret-button {
-  position: fixed; /* Fixes the button in the corner */
+  position: fixed;
   top: 10px;
   left: 10px;
   padding: 0.5rem 1rem;
@@ -125,39 +125,84 @@ h1 {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-  /* Email button */
-  .email-button {
-    margin-left: 0;
-    margin-top: 2rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    display: block;
-    width: fit-content;
-    margin: 2rem auto 0 auto;
-  }
+.email-button {
+  margin-left: 0;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0 auto;
+}
 
-  /* Secret button positioning and size */
-  .secret-button {
-    top: 10px;
-    left: 10px;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
+.secret-button {
+  top: 10px;
+  left: 10px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
-    /* Adjust PDF preview for phones */
-    .pdf-preview {
-        display: block; /* Ensure it's visible */
-        width: 100%; /* Full width */
-        height: auto; /* Let it adjust based on content */
-        margin: 1rem auto 0 auto; /* Center it with some margin */
-        order: 0; /* Place it below the content */
-    }
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
 
-    /* Ensure the content is on top */
-    .container {
-        display:flex;
-        order: 1; /* Place content above the PDF preview */
-    }
+  .container,
+  .container2 {
+    width: 90%;
+    flex-direction: column;
+    padding: 0rem;
+    margin-bottom: 0rem;
+  }
+  
+  .container {
+    margin-top: 2rem;
+    height: 15rem;
+  }
+  
+  .container2 {
+    height: 100vh;
+  }
+  
+  .content {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .intro {
+    font-size: 0.7rem;
+  }
+
+  .email-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .pdf-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    object-fit: cover;
+    overflow: auto;
+  }
+
+  .pdf-embed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  }
+  
 }
+
