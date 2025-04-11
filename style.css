@@ -159,11 +159,11 @@ h1 {
   
   .container {
     margin-top: 2rem;
-    height: 15rem;
+    height: 30vh;
   }
   
   .container2 {
-    height: 25rem;
+    height: 70vh;
   }
   
   .content {
@@ -181,7 +181,7 @@ h1 {
   }
 
   .email-button {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.6rem 1.2rem;
     margin-top: 1.5rem;
   }
