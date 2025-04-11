@@ -145,7 +145,7 @@ h1 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     /* Adjust PDF preview for phones */
     .pdf-preview {
         display: block; /* Ensure it's visible */
@@ -160,10 +160,4 @@ h1 {
         display:flex;
         order: 1; /* Place content above the PDF preview */
     }
-}
-
-@media (max-width: 768px) {
-  .container {
-    display: flex;
-  }
 }
