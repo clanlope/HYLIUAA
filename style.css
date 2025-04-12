@@ -36,9 +36,12 @@ body {
   top: 80vh; /* Position the button container at the bottom of the screen */
   display: flex;
   transition: transform 0.5s ease;
-  justify-content: center; /* Center the buttons horizontally */
   gap: 1rem; /* Add spacing between buttons */
   margin-top: 0; /* Add spacing above the button container */
+flex-direction: row; /* Stack buttons vertically */
+  justify-content: center; /* Center buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  
 }
 
 .content {
@@ -112,6 +115,7 @@ h1 {
 
 #pdfViewer.show {
   right: 0; /* Slide into view */
+  transition: right 0.5s ease;
 }
 
 iframe {
@@ -119,6 +123,24 @@ iframe {
   height: 100%;
   border: none;
   /*pointer-events: none;*/
+}
+
+.other-page-button {
+  background-color: #4CAF50; /* Green background */
+  color: #ffffff;
+}
+
+.other-page-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.back-button {
+  background-color: #555555; /* Grey background */
+  color: #ffffff;
+}
+
+.back-button:hover {
+  background-color: #333333; /* Darker grey on hover */
 }
 
 @media (max-width: 768px) {
@@ -146,6 +168,7 @@ iframe {
   }
 
   #pdfViewer.show {
+    width: 100vw;
     bottom: 0;
   }
 
