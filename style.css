@@ -182,8 +182,9 @@ iframe {
   }
 
   .button {
-    font-size: 0.8rem; /* Smaller font size for buttons */
+    font-size: 0.5rem; /* Smaller font size for buttons */
     padding: 0.4rem 0.7rem; /* Adjust padding for smaller buttons */
+    min-width: 60px;
   }
 
   #pdfViewer {  
@@ -213,9 +214,5 @@ iframe {
     opacity: 0; /* Make the button invisible */
   }
 
-  .back-button {
-    width: 90%; /* Make the button wider for better usability on smaller screens */
-    bottom: 1rem; /* Adjust spacing for smaller screens */
-  }
 
 }
