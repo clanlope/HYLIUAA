@@ -148,11 +148,11 @@ iframe {
   }
 
   .content.move {
-    transform: translateY(-30vh); /* Adjust content movement for smaller screens */
+    transform: translateY(-40vh); /* Adjust content movement for smaller screens */
   }
 
   .button-container.move {
-    transform: translateY(-30vh); /* Move button-container up only on smaller screens */
+    transform: translateY(-40vh); /* Move button-container up only on smaller screens */
   }
 
   .pdf-back-button {
