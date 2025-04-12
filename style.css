@@ -32,6 +32,8 @@ body {
 }
 
 .button-container {
+  position: absolute;
+  top: 80vh; /* Position the button container at the bottom of the screen */
   display: flex;
   transition: transform 0.5s ease;
   justify-content: center; /* Center the buttons horizontally */
@@ -152,7 +154,7 @@ iframe {
   }
 
   .button-container.move {
-    transform: translateY(-80vh); /* Move button-container up only on smaller screens */
+    transform: translateY(-70vh); /* Move button-container up only on smaller screens */
   }
 
   .pdf-back-button {
