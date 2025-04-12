@@ -9,7 +9,7 @@
 body {
   font-family: 'Calibri', sans-serif;
   flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
