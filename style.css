@@ -134,12 +134,12 @@ iframe {
     padding: 0.4rem 0.7rem; /* Adjust padding for smaller buttons */
   }
 
-  #pdfViewer {
+  #pdfViewer {  
     top: auto;
-    bottom: -60vh;
+    bottom: -50vh;
     right: 0;
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
     overflow: auto;
     transition: bottom 0.5s;
   }
