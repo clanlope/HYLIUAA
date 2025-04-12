@@ -138,8 +138,8 @@ iframe {
     top: auto;
     bottom: -20vh;
     right: 0;
-    width: auto;
-    height: 20vh;
+    width: 100vw;
+    height: 30vh;
     overflow: auto;
   }
 
@@ -153,5 +153,10 @@ iframe {
 
   .button-container.move {
     transform: translateY(-20vh); /* Move button-container up only on smaller screens */
+  }
+
+  .pdf-back-button {
+    pointer-events: none; /* Disable interaction */
+    opacity: 0; /* Make the button invisible */
   }
 }
