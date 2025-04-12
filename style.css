@@ -101,7 +101,7 @@ h1 {
 #pdfViewer {
   position: fixed;
   top: 0;
-  right: -30vw; /* Initially hidden off-screen */
+  right: -30vw; /* Initially hidden off-screen for larger screens */
   width: 30vw;
   height: 100vh;
   z-index: 1000;
@@ -109,13 +109,12 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: right 0.5s ease; /* Smooth slide-in effect */
+  transition: right 0.5s ease, bottom 0.5s ease; /* Add bottom transition */
   overflow: hidden;
 }
 
 #pdfViewer.show {
-  right: 0; /* Slide into view */
-  transition: right 0.5s ease;
+  right: 0; /* Slide into view for larger screens */
 }
 
 iframe {
@@ -160,16 +159,16 @@ iframe {
 
   #pdfViewer {  
     top: auto;
-    bottom: -60vh;
+    bottom: -60vh; /* Initially hidden off-screen for smaller screens */
+    right: 0; /* Ensure it stays horizontally aligned */
     width: 100vw;
     height: 60vh;
     overflow: auto;
-    transition: bottom 0.5s;
+    transition: bottom 0.5s ease; /* Transition only the bottom property */
   }
 
   #pdfViewer.show {
-    width: 100vw;
-    bottom: 0;
+    bottom: 0; /* Slide into view from the bottom */
   }
 
   .content.move {
