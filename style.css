@@ -37,7 +37,7 @@ body {
   display: flex;
   transition: transform 0.5s ease;
   gap: 1rem; /* Add spacing between buttons */
-  margin-top: 0; /* Add spacing above the button container */
+  margin-top: auto; /* Add spacing above the button container */
   flex-direction: row; /* Stack buttons vertically */
   justify-content: center; /* Center buttons vertically */
   align-items: center; /* Center buttons horizontally */
@@ -184,7 +184,7 @@ iframe {
   .button {
     font-size: 0.6rem; /* Smaller font size for buttons */
     padding: 0.4rem 0.7rem; /* Adjust padding for smaller buttons */
-    min-width: 80px;
+    min-width: 90px;
   }
 
   #pdfViewer {  
