@@ -25,7 +25,7 @@
   <!-- Hidden PDF Viewer -->
   <div id="pdfViewer">
     <iframe src="HYLIUAA.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
-    <button class="button pdf-back-button" onclick="closePDF()">Back</button>
+    <button class="button pdf-back-button" onclick="togglePDF()">Back</button>
   </div>
   
 
@@ -49,10 +49,6 @@
       }
     }
 
-    function closePDF() {
-      document.getElementById('pdfViewer').classList.remove('show');
-      document.getElementById('content').classList.remove('move');
-    }
   </script>
 </body>
 </html>

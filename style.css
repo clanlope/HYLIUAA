@@ -138,8 +138,9 @@ iframe {
     top: auto;
     bottom: -20vh;
     right: 0;
-    width: 100vw;
+    width: auto;
     height: 20vh;
+    overflow: auto;
   }
 
   #pdfViewer.show {
