@@ -136,10 +136,10 @@ iframe {
 
   #pdfViewer {
     top: auto;
-    bottom: -20vh;
+    bottom: -40vh;
     right: 0;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
     overflow: auto;
   }
 
