@@ -2,47 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYLIUAA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <!-- Left side content -->
-    <div class="content">
+    <div class="content" id="content">
       <h1>Hi, this is HYLIUAA.</h1>
-      <p class="intro">MS in EE with 4 years of experience in semiconductor device R&D and fab mass production.</p>
-      <p class="intro">A passionate individual in the field of IC design and microelectronics.</p>
+      <p class="intro">MS in EE with 4 years of experience in semiconductor device R&D&#32;
+        and fab mass production.</p>
+      <p class="intro">Comprehensive understanding of the full chip design and fabrication process.</p>
+      <p class="intro">Passionate about IC design, circuit-level development, and coding.</p>
       <p class="intro">Feel free to reach out if you want to offer me a job.</p>
-      <a href="mailto:hyliuaax@gmail.com" class="email-button">Contact Me</a>
     </div>
   </div>
-  <div class="container2">
-    <div class="pdf-preview">
-      <object data="HYLIUAA.pdf#toolbar=0&navpanes=0" type="application/pdf" class="pdf-embed" style="border: none;"></object>
-    </div>
+  <div class="button-container">
+    <a href="mailto:hyliuaax@gmail.com" class="button email-button">Contact Me</a>
+    <button class="button pdf-button" onclick="togglePDF()">View Resume</button>
   </div>
-	<button class="secret-button" onclick="toggleBlur()">HYLIUAA</button>
+
+  <!-- Hidden PDF Viewer -->
+  <div id="pdfViewer">
+    <iframe src="HYLIUAA.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    <button class="button pdf-back-button" onclick="closePDF()">Back</button>
+  </div>
+  
+
+  <script>
+    function togglePDF() {
+      const pdfViewer = document.getElementById('pdfViewer');
+      const content = document.getElementById('content');
+      const buttonContainer = document.querySelector('.button-container');
+      const button = document.querySelector('.pdf-button');
+
+      if (pdfViewer.classList.contains('show')) {
+        pdfViewer.classList.remove('show');
+        content.classList.remove('move');
+        buttonContainer.classList.remove('move');
+
+      } else {
+        pdfViewer.classList.add('show');
+        content.classList.add('move');
+        buttonContainer.classList.add('move');
+
+      }
+    }
+
+    function closePDF() {
+      document.getElementById('pdfViewer').classList.remove('show');
+      document.getElementById('content').classList.remove('move');
+    }
+  </script>
 </body>
 </html>
 
-
-
-
-<script>
-  let isBlurred = true; // Track the blur state
-
-  function toggleBlur() {
-    const pdfPreview = document.querySelector('.pdf-preview');
-    
-    // Toggle blur state
-    if (isBlurred) {
-      pdfPreview.style.filter = 'none';  // Remove blur
-    } else {
-      pdfPreview.style.filter = 'blur(3px)'; // Apply blur
-    }
-
-    // Toggle the state
-    isBlurred = !isBlurred;
-  }
-</script>
