@@ -32,16 +32,16 @@ body {
 }
 
 .button-container {
-  position: absolute;
-  top: 80vh; /* Position the button container at the bottom of the screen */
+  position: relative;
+  top: auto; /* Position the button container at the bottom of the screen */
   display: flex;
   transition: transform 0.5s ease;
   gap: 1rem; /* Add spacing between buttons */
   margin-top: 0; /* Add spacing above the button container */
-flex-direction: row; /* Stack buttons vertically */
+  flex-direction: row; /* Stack buttons vertically */
   justify-content: center; /* Center buttons vertically */
   align-items: center; /* Center buttons horizontally */
-  
+  margin-top: 2rem;
 }
 
 .content {
@@ -124,13 +124,45 @@ iframe {
   /*pointer-events: none;*/
 }
 
-.back-button {
-  background-color: #555555; /* Grey background */
-  color: #ffffff;
+.knowledge-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.back-button:hover {
-  background-color: #333333; /* Darker grey on hover */
+.map-node {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-node h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #435b77;
+}
+
+.map-node ul {
+  list-style: none; /* Remove default bullet markers */
+  padding-left: 1.5rem; /* Add padding to align custom symbols with text */
+}
+
+.map-node ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  position: relative; /* Enable pseudo-element positioning */
+}
+
+.map-node ul li::before {
+  content: "•"; /* Replace with your custom symbol, such as a bullet */
+  font-size: 1.2rem; /* Slightly larger than text to make the symbol stand out */
+  color: #ff000083; /* Use accent color */
+  position: absolute;
+  left: -1.5rem; /* Offset marker to match alignment */
+  top: 0.1rem; /* Adjust vertical alignment */
 }
 
 @media (max-width: 768px) {
@@ -163,15 +195,21 @@ iframe {
   }
 
   .content.move {
-    transform: translateY(-80vh); /* Adjust content movement for smaller screens */
+    transform: translateY(-100vh); /* Adjust content movement for smaller screens */
   }
 
   .button-container.move {
-    transform: translateY(-70vh); /* Move button-container up only on smaller screens */
+    transform: translateY(-50vh); /* Move button-container up only on smaller screens */
   }
 
   .pdf-back-button {
     pointer-events: none; /* Disable interaction */
     opacity: 0; /* Make the button invisible */
   }
+
+  .back-button {
+    width: 90%; /* Make the button wider for better usability on smaller screens */
+    bottom: 1rem; /* Adjust spacing for smaller screens */
+  }
+
 }
