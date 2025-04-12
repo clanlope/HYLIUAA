@@ -136,9 +136,9 @@ iframe {
 
   #pdfViewer {  
     top: auto;
-    bottom: -40vh;
+    bottom: -80vh;
     width: 100vw;
-    height: 40vh;
+    height: 80vh;
     overflow: auto;
     transition: bottom 0.5s;
   }
@@ -148,11 +148,11 @@ iframe {
   }
 
   .content.move {
-    transform: translateY(-40vh); /* Adjust content movement for smaller screens */
+    transform: translateY(-80vh); /* Adjust content movement for smaller screens */
   }
 
   .button-container.move {
-    transform: translateY(-40vh); /* Move button-container up only on smaller screens */
+    transform: translateY(-80vh); /* Move button-container up only on smaller screens */
   }
 
   .pdf-back-button {
