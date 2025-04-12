@@ -71,17 +71,23 @@ h1 {
 .button {
   display: inline-block;
   padding: 0.618rem 1rem; /* Golden ratio padding */
+  width: auto;
+  min-width: 100px;
+  height: auto;
+  text-align: center;
+  line-height: normal;
+
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 50px; /* Fully rounded corners */
+  border-radius: 10px; /* Fully rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-right: 2rem;
   margin-bottom: 1rem; /* Space between buttons */
-  border: none; /* Remove default button border */
+   /* Space between buttons */border: none; /* Remove default button border */
 
-  background-color: #435b77; /* Faded grey background */
+ /* Remove default button border */  background-color: #435b77; /* Faded grey background */
   color: #ffffff;
 }
 
