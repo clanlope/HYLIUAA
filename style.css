@@ -124,15 +124,6 @@ iframe {
   /*pointer-events: none;*/
 }
 
-.other-page-button {
-  background-color: #4CAF50; /* Green background */
-  color: #ffffff;
-}
-
-.other-page-button:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
-
 .back-button {
   background-color: #555555; /* Grey background */
   color: #ffffff;
