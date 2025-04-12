@@ -116,7 +116,7 @@ iframe {
   width: 100%;
   height: 100%;
   border: none;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 @media (max-width: 768px) {
@@ -136,11 +136,12 @@ iframe {
 
   #pdfViewer {
     top: auto;
-    bottom: -40vh;
+    bottom: -60vh;
     right: 0;
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
     overflow: auto;
+    transition: bottom 0.5s;
   }
 
   #pdfViewer.show {
@@ -148,11 +149,11 @@ iframe {
   }
 
   .content.move {
-    transform: translateY(-20vh); /* Adjust content movement for smaller screens */
+    transform: translateY(-30vh); /* Adjust content movement for smaller screens */
   }
 
   .button-container.move {
-    transform: translateY(-20vh); /* Move button-container up only on smaller screens */
+    transform: translateY(-30vh); /* Move button-container up only on smaller screens */
   }
 
   .pdf-back-button {
