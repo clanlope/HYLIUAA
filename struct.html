@@ -8,7 +8,7 @@
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-  <a href="index.html" id="pdfBackButton" class="button back-button">Back</a>
+  <a href="index.html" id="kmBackButton" class="button back-button">← <!-- Unicode arrow --></a>
   <div class="fade-bg"></div>
   <div class="container">
     <div class="content">
@@ -51,12 +51,12 @@
   </div>
 
   <script>
-        const pdfBackButton = document.getElementById('pdfBackButton');
-    pdfBackButton.addEventListener('click', (event) => {
+        const kmBackButton = document.getElementById('kmBackButton');
+    kmBackButton.addEventListener('click', (event) => {
       event.preventDefault();
       document.body.classList.add('fade-out');
       setTimeout(() => {
-        window.location.href = pdfBackButton.href;
+        window.location.href = kmBackButton.href;
       }, 300); // Match the fade-out animation duration
     });
   </script>
