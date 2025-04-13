@@ -114,21 +114,31 @@ h1 {
 
 .back-button {
   position: fixed;
-  top: 85vh;
-  right: 10vw;
+  bottom: 80px;
+  right: 10px;
   z-index: 999;
-  font-size: 2rem;
   width: 50px; /* Set width for a circular button */
   height: 50px; /* Set height for a circular button */
-  background-color: transparent; /* A nice blue color */
-  color: #ffffff; /* White arrow color */
-  border: black; 
+  background-color: transparent; /* A nice blue background */
+  border: 1px solid #000000; /* White border */
   border-radius: 50%; /* Make it circular */
-  display: flex; /* Center the arrow inside */
+  display: flex; /* Center the image inside */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: pointer; /* Change cursor to pointer */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
+
+.back-button:hover {
+  /*background-color: #d3d3d3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.back-button img {
+  width: 100%; /* Scale the image to fit inside the button */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits properly */
 }
 
 #pdfViewer {
