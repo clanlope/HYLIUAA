@@ -114,7 +114,7 @@ h1 {
 
 .back-button {
   position: fixed;
-  top: 90vh;
+  top: 85vh;
   right: 10vw;
   z-index: 999;
   background-color: #00000028;
