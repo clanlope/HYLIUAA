@@ -100,6 +100,14 @@ h1 {
   color: #ffffff;
 }
 
+.back-button {
+  position: absolute;
+  top: auto;
+  left: -40vw;
+  background-color: #000000;
+  color: #ffffff;
+}
+
 #pdfViewer {
   position: fixed;
   top: 0;
