@@ -131,7 +131,7 @@ h1 {
 }
 
 .back-button:hover {
-  /*background-color: #d3d3d3; /* Darker blue on hover */
+  background-color: #ffffff;
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
