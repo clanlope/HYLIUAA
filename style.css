@@ -36,11 +36,11 @@ body {
   display: flex;
   transition: transform 0.5s ease;
   gap: 1rem;
-  margin-top: auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  
 }
 
 .content {
@@ -80,10 +80,11 @@ h1 {
   border-radius: 50px;
   cursor: pointer;
   margin-right: 2rem;
+  margin-left: 2rem;
   margin-bottom: 1rem;
   border: none;
   transition: background-color 0.3s ease;
-  background-color: #2a0079e8;
+  background-color: #000000;
   color: #ffffff;
 }
 
