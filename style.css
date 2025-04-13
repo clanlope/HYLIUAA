@@ -222,7 +222,7 @@ body.fade-out {
   }
 
   .button-container.move {
-    transform: translateY(-20vh);
+    transform: translateY(-30vh);
   }
 
   .pdf-back-button {
