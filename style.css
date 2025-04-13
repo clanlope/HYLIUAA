@@ -1,4 +1,3 @@
-/* General Reset */
 * {
   font-family: 'Calibri', sans-serif;
   margin: 0;
@@ -22,36 +21,36 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   max-width: 1800px;
-  height: auto; 
-  background-color: #f9f9f9; 
-  padding: 1rem; 
+  height: auto;
+  background-color: #f9f9f9;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .button-container {
   position: relative;
-  top: auto; /* Position the button container at the bottom of the screen */
+  top: auto;
   display: flex;
   transition: transform 0.5s ease;
-  gap: 1rem; /* Add spacing between buttons */
-  margin-top: auto; /* Add spacing above the button container */
-  flex-direction: row; /* Stack buttons vertically */
-  justify-content: center; /* Center buttons vertically */
-  align-items: center; /* Center buttons horizontally */
+  gap: 1rem;
+  margin-top: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
 .content {
   position: relative;
-  transition: transform 0.5s ease; /* Smooth movement */
+  transition: transform 0.5s ease;
   width: 100%;
 }
 
 .content.move {
-  transform: translateX(-20vw); /* Move content to the left */
+  transform: translateX(-20vw);
 }
 
 h1 {
@@ -67,7 +66,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Common Button Styles */
 .button {
   display: inline-block;
   padding: 0.618rem 1rem;
@@ -76,13 +74,11 @@ h1 {
   height: auto;
   text-align: center;
   line-height: normal;
-
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   border-radius: 50px;
   cursor: pointer;
-  
   margin-right: 2rem;
   margin-bottom: 1rem;
   border: none;
@@ -91,24 +87,23 @@ h1 {
   color: #ffffff;
 }
 
-.pdf-back-button {
-  position: absolute; 
-  top: 92vh; 
-  left: 2rem;
-  background-color: #000000; /* Red background for back button */
-  color: #ffffff;
-}
-
 .button:hover {
   background-color: #000000;
-
   color: #fff;
+}
+
+.pdf-back-button {
+  position: absolute;
+  top: 92vh;
+  left: 2rem;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 #pdfViewer {
   position: fixed;
   top: 0;
-  right: -30vw; /* Initially hidden off-screen for larger screens */
+  right: -30vw;
   width: 30vw;
   height: 100vh;
   z-index: 1000;
@@ -116,30 +111,28 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: right 0.5s ease, bottom 0.5s ease; /* Add bottom transition */
+  transition: right 0.5s ease, bottom 0.5s ease;
   overflow: hidden;
 }
 
 #pdfViewer.show {
-  right: 0; /* Slide into view for larger screens */
+  right: 0;
 }
 
 iframe {
   width: 100%;
   height: 100%;
   border: none;
-  /*pointer-events: none;*/
 }
 
 .knowledge-map {
   display: grid;
-  width: 100%; 
-  height: auto; 
-  min-width: 0; 
+  width: 100%;
+  height: auto;
+  min-width: 300px;
   grid-template-columns: repeat(2, 1fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .map-node {
@@ -158,71 +151,86 @@ iframe {
 }
 
 .map-node ul {
-  list-style: none; /* Remove default bullet markers */
-  padding-left: 1.5rem; /* Add padding to align custom symbols with text */
+  list-style: none;
+  padding-left: 1.5rem;
 }
 
 .map-node ul li {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  position: relative; /* Enable pseudo-element positioning */
+  position: relative;
 }
 
 .map-node ul li::before {
-  content: "✔"; /* Replace with your custom symbol, such as a bullet */
-  font-size: 1.2rem; /* Slightly larger than text to make the symbol stand out */
-  color: #3cd300de; /* Use accent color */
+  content: "✔";
+  font-size: 1.2rem;
+  color: #3cd300de;
   position: absolute;
-  left: -2rem; /* Offset marker to match alignment */
-  top: -0.25rem; /* Adjust vertical alignment */
+  left: -2rem;
+  top: -0.25rem;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+body.fade-out {
+  animation: fadeOut 0.3s ease forwards; /* Apply fade-out animation */
 }
 
 @media (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+  }
+
   h1 {
-    font-size: 1.8rem; /* Smaller font size for the heading */
+    font-size: 1.8rem;
   }
 
   .intro {
-    font-size: 0.9rem; /* Smaller font size for paragraphs */
-    line-height: 1.4; /* Adjust line height for better readability */
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .button {
-    font-size: 0.6rem; /* Smaller font size for buttons */
-    padding: 0.4rem 0.7rem; /* Adjust padding for smaller buttons */
+    font-size: 0.6rem;
+    padding: 0.4rem 0.7rem;
     min-width: 90px;
   }
 
-  #pdfViewer {  
+  #pdfViewer {
     top: auto;
-    bottom: -60vh; /* Initially hidden off-screen for smaller screens */
-    right: 0; /* Ensure it stays horizontally aligned */
+    bottom: -60vh;
+    right: 0;
     width: 100vw;
     height: 60vh;
     overflow: auto;
-    transition: bottom 0.5s ease; /* Transition only the bottom property */
+    transition: bottom 0.5s ease;
   }
 
   #pdfViewer.show {
-    bottom: 0; /* Slide into view from the bottom */
+    bottom: 0;
   }
 
   .content.move {
-    transform: translateY(-100vh); /* Adjust content movement for smaller screens */
+    transform: translateY(-100vh);
   }
 
   .button-container.move {
-    transform: translateY(-50vh); /* Move button-container up only on smaller screens */
+    transform: translateY(-10vh);
   }
 
   .pdf-back-button {
-    pointer-events: none; /* Disable interaction */
-    opacity: 0; /* Make the button invisible */
+    pointer-events: none;
+    opacity: 0;
   }
 
   .knowledge-map {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-
 }

@@ -20,7 +20,7 @@
   <div class="button-container">
     <a href="mailto:hyliuaax@gmail.com" class="button email-button">Contact Me</a>
     <button class="button pdf-button" onclick="togglePDF()">View Resume</button>
-    <a href="struct.html" class="button other-page-button">Know More</a>
+    <a href="struct.html" class="button other-page-button" id="knowMoreButton">Know More</a>
   </div>
 
   <!-- Hidden PDF Viewer -->
@@ -49,6 +49,16 @@
 
       }
     }
+
+    const knowMoreButton = document.getElementById('knowMoreButton');
+
+    knowMoreButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = knowMoreButton.href;
+      }, 300); // Match the fade-out animation duration
+    });
 
   </script>
 </body>

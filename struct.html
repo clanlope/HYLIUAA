@@ -48,7 +48,18 @@
   </div>
 
   <div class="button-container">
-    <a href="index.html" class="button back-button">Back</a>
+    <a href="index.html" id="pdfBackButton" class="button back-button">Back</a>
   </div>
+
+  <script>
+        const pdfBackButton = document.getElementById('pdfBackButton');
+    pdfBackButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = pdfBackButton.href;
+      }, 300); // Match the fade-out animation duration
+    });
+  </script>
 </body>
 </html>
