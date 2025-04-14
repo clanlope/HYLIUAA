@@ -1,12 +1,11 @@
 * {
-  font-family: 'Calibri', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Calibri', sans-serif;
   flex-direction: column;
   overflow: auto;
   display: flex;
@@ -293,6 +292,18 @@ a:hover {
   color: #0056b3; /* Change color on hover */
   text-decoration: underline; /* Optional: Add underline on hover */
   font-weight: bold;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+code, pre, .monospace {
+  font-family: 'JetBrains Mono', monospace;
 }
 
 @media (max-width: 768px) {
