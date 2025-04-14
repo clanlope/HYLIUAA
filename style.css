@@ -30,8 +30,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom right, rgb(244, 251, 255), rgba(202, 211, 226, 0.795));
-  
-  z-index: -1; /* Ensure it appears above other elements */
+  z-index: -1;
 }
 
 .container {
@@ -46,9 +45,8 @@ body {
 }
 
 .button-container {
-  position: fixed;
+  position: relative;
   top: auto;
-  bottom: 10vh;
   display: flex;
   transition: transform 0.5s ease;
   gap: 1rem;
@@ -104,7 +102,6 @@ h1 {
   display: inline-block;
   padding: 0.5rem;
   width: auto;
-
   height: auto;
   text-align: center;
   line-height: normal;
@@ -132,28 +129,28 @@ h1 {
   bottom: 80px;
   right: 10px;
   z-index: 999;
-  width: 50px; /* Set width for a circular button */
-  height: 50px; /* Set height for a circular button */
-  background-color: transparent; /* A nice blue background */
-  border: 1px solid #000000; /* White border */
-  border-radius: 50%; /* Make it circular */
-  display: flex; /* Center the image inside */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  cursor: pointer; /* Change cursor to pointer */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-button:hover {
   background-color: #ffffff;
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.1);
 }
 
 .back-button img {
-  width: 100%; /* Scale the image to fit inside the button */
-  height: 100%; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image fits properly */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #pdfViewer {
@@ -237,7 +234,7 @@ iframe {
 }
 
 body.fade-out {
-  animation: fadeOut 0.3s ease forwards; /* Apply fade-out animation */
+  animation: fadeOut 0.3s ease forwards;
 }
 
 .modal {
@@ -249,7 +246,7 @@ body.fade-out {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -264,11 +261,10 @@ body.fade-out {
   text-align: center;
 }
 
-/* Adjust the position of the close button */
 .close-button {
   position: absolute;
-  top: 10px; /* Move it higher */
-  right: 20px; /* Keep it aligned to the right */
+  top: 10px;
+  right: 20px;
   z-index: 10;
   color: #aaa;
   font-size: 28px;
@@ -293,21 +289,19 @@ body.fade-out {
 
 .wechat-qr {
   width: 270.75px;
-  /*height: 366px;*/
   height: auto;
   margin-top: 10px;
 }
 
-/* Style for all hyperlinks */
 a {
-  color: #006ae2; /* Change to your desired color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Add a smooth color transition */
+  color: #006ae2;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #0056b3; /* Change color on hover */
-  text-decoration: underline; /* Optional: Add underline on hover */
+  color: #0056b3;
+  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -317,7 +311,6 @@ a:hover {
   font-weight: normal;
   font-style: normal;
 }
-
 
 code, pre, .monospace {
   font-family: 'JetBrains Mono', monospace;
@@ -364,7 +357,8 @@ code, pre, .monospace {
   }
 
   .button-container.move {
-    transform: translateY(-80vh);
+    position: fixed;
+    top: 1vh;
   }
 
   .knowledge-map {
@@ -384,10 +378,9 @@ code, pre, .monospace {
   .date {
     font-size: var(--font-size-small);
   }
-  
+
   .back-button {
     min-width: 50px;
     font-size: 2rem;
   }
-
 }
