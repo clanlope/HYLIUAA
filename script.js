@@ -57,3 +57,18 @@ window.addEventListener('click', (event) => {
     modal.style.display = 'none';
   }
 });
+
+// Clear cookies and local storage when the user closes the website
+window.addEventListener('unload', () => {
+  // Clear all cookies
+  document.cookie.split(";").forEach((cookie) => {
+    const name = cookie.split("=")[0].trim();
+    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/`;
+  });
+
+  // Clear local storage
+  localStorage.clear();
+
+  // Clear session storage
+  sessionStorage.clear();
+});
