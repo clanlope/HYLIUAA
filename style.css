@@ -341,7 +341,7 @@ code, pre, .monospace {
     bottom: -100%;
     right: 0;
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
     overflow: auto;
     transition: bottom 0.5s ease;
   }
