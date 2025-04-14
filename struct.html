@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AA</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <a href="index.html" id="kmBackButton" class="button back-button"><img src="images/back.png" alt="Back"></a>
@@ -50,15 +50,6 @@
     </div>
   </div>
 
-  <script>
-        const kmBackButton = document.getElementById('kmBackButton');
-    kmBackButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      document.body.classList.add('fade-out');
-      setTimeout(() => {
-        window.location.href = kmBackButton.href;
-      }, 300); // Match the fade-out animation duration
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

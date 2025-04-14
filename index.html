@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HYLIUAA</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <div class="fade-bg"></div>
@@ -27,42 +27,11 @@
 
   <!-- Hidden PDF Viewer -->
   <div id="pdfViewer">
-    <iframe src="HYLIUAA.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    <iframe id="pdfFrame"></iframe>
     <button class="button pdf-back-button" onclick="togglePDF()">Back</button>
   </div>
-  
 
-  <script>
-    function togglePDF() {
-      const pdfViewer = document.getElementById('pdfViewer');
-      const content = document.getElementById('content');
-      const buttonContainer = document.querySelector('.button-container');
-      const button = document.querySelector('.pdf-button');
-
-      if (pdfViewer.classList.contains('show')) {
-        pdfViewer.classList.remove('show');
-        content.classList.remove('move');
-        buttonContainer.classList.remove('move');
-
-      } else {
-        pdfViewer.classList.add('show');
-        content.classList.add('move');
-        buttonContainer.classList.add('move');
-
-      }
-    }
-
-    const knowMoreButton = document.getElementById('knowMoreButton');
-
-    knowMoreButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      document.body.classList.add('fade-out');
-      setTimeout(() => {
-        window.location.href = knowMoreButton.href;
-      }, 300); // Match the fade-out animation duration
-    });
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
 
