@@ -46,8 +46,9 @@ body {
 }
 
 .button-container {
-  position: relative;
+  position: fixed;
   top: auto;
+  bottom: 10vh;
   display: flex;
   transition: transform 0.5s ease;
   gap: 1rem;
@@ -55,7 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  
+  z-index: 1100;
 }
 
 .content {
@@ -124,14 +125,6 @@ h1 {
 .button:hover {
   background-color: #000000;
   color: #fff;
-}
-
-.pdf-back-button {
-  position: absolute;
-  top: 92vh;
-  left: 2rem;
-  background-color: #000000;
-  color: #ffffff;
 }
 
 .back-button {
@@ -357,7 +350,7 @@ code, pre, .monospace {
     bottom: -100%;
     right: 0;
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     overflow: auto;
     transition: bottom 0.5s ease;
   }
@@ -371,12 +364,7 @@ code, pre, .monospace {
   }
 
   .button-container.move {
-    position: fixed; /* Position relative to the viewport */
-  }
-
-  .pdf-back-button {
-    pointer-events: none;
-    opacity: 0;
+    transform: translateY(-80vh);
   }
 
   .knowledge-map {
