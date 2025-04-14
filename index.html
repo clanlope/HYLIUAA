@@ -20,9 +20,22 @@
     </div>
   </div>
   <div class="button-container">
-    <a href="mailto:hyliuaax@gmail.com" class="button email-button">Contact Me</a>
+    <button class="button email-button" onclick="openContactModal()">Contact Me</button>
     <button class="button pdf-button" onclick="togglePDF()">View Resume</button>
     <a href="struct.html" class="button other-page-button" id="knowMoreButton">Know More</a>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Me</h2>
+      <ul class="contact-options">
+        <li><strong>Email:</strong> <a href="mailto:hyliuaax@gmail.com">hyliuaax@gmail.com</a></li>
+        <li><strong>Phone:</strong> +86 19923535969</li>
+        <li><img src="images/wechat_qr.jpg" alt="WeChat QR Code" class="wechat-qr"></li>
+      </ul>
+    </div>
   </div>
 
   <!-- Hidden PDF Viewer -->

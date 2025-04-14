@@ -224,6 +224,75 @@ body.fade-out {
   animation: fadeOut 0.3s ease forwards; /* Apply fade-out animation */
 }
 
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Adjust the position of the close button */
+.close-button {
+  position: absolute;
+  top: 10px; /* Move it higher */
+  right: 10px; /* Keep it aligned to the right */
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-options {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-options li {
+  margin: 10px 0;
+}
+
+.wechat-qr {
+  width: 270.75px;
+  height: 366px;
+  margin-top: 10px;
+}
+
+/* Style for all hyperlinks */
+a {
+  color: #006ae2; /* Change to your desired color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Add a smooth color transition */
+}
+
+a:hover {
+  color: #0056b3; /* Change color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   body {
     justify-content: flex-start;

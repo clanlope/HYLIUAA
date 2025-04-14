@@ -40,3 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+function openContactModal() {
+  const modal = document.getElementById('contactModal');
+  modal.style.display = 'block';
+}
+
+function closeContactModal() {
+  const modal = document.getElementById('contactModal');
+  modal.style.display = 'none';
+}
+
+window.addEventListener('click', (event) => {
+  const modal = document.getElementById('contactModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
