@@ -81,6 +81,24 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.detail {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  font-size: var(--font-size-regular);
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  color: #0a0092;
+}
+
+.date {
+  font-style: italic;
+  font-size: var(--font-size-small);
+  color: #555;
+}
+
 .button {
   display: inline-block;
   padding: 0.5rem;
@@ -336,10 +354,10 @@ code, pre, .monospace {
 
   #pdfViewer {
     top: auto;
-    bottom: -60vh;
+    bottom: -100%;
     right: 0;
     width: 100vw;
-    height: 60vh;
+    height: 90vh;
     overflow: auto;
     transition: bottom 0.5s ease;
   }
@@ -353,7 +371,7 @@ code, pre, .monospace {
   }
 
   .button-container.move {
-    transform: translateY(-30vh);
+    position: fixed; /* Position relative to the viewport */
   }
 
   .pdf-back-button {
@@ -371,14 +389,14 @@ code, pre, .monospace {
     color: #435b77;
   }
 
-  .map-node ul li {
+  .map-node ul li,
+  .map-node ul li::before,
+  .detail,
+  .company,
+  .date {
     font-size: var(--font-size-small);
   }
   
-  .map-node ul li::before {
-    font-size: var(--font-size-small);
-  }
-
   .back-button {
     min-width: 50px;
     font-size: 2rem;
